@@ -36,7 +36,7 @@ public class CameraMove : MonoBehaviour
         // Calculate speed based on distance to target - this makes the camera
         // stop smoothly when approaching its target position.
         float distance = (target - transform.position).magnitude;
-        currentSpeed = Mathf.Lerp(0, speed, 2 * distance / speed);
+        currentSpeed = speed;
 
         // Move smoothly towards target
         Vector3 newPosition = Vector3.MoveTowards(transform.position, target, currentSpeed * Time.deltaTime);
