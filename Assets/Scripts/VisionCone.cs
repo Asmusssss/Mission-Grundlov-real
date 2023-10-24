@@ -113,7 +113,9 @@ public class VisionCone : MonoBehaviour
         }
 
         stateIndicator.text = "Idle...";
-        transform.forward = Vector3.forward;
+        //transform.forward = Vector3.forward;
+
+
     }
 
     void Alert()
@@ -132,4 +134,5 @@ public class VisionCone : MonoBehaviour
         Idle,
         Alert
     }
+
 }
