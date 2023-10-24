@@ -61,6 +61,7 @@ public class Patrol : MonoBehaviour
 
     void Update()
     {
+
         if ((transform.position - targetPoint).magnitude < targetRadius)
         {
             NextTarget();
