@@ -47,12 +47,12 @@ public class VisionCone : MonoBehaviour
 
     bool PlayerSound()
     {
-        //if (GetDistanceToPlayer() < visionRange)
+       if (GetDistanceToPlayer() < visionRange)
         {
-           // if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
+            if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
             {
 
-                //return true;
+                return true;
 
             }
         }
