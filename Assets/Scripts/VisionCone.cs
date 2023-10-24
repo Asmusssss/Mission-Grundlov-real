@@ -10,7 +10,15 @@ public class VisionCone : MonoBehaviour
     [SerializeField] private float visionConeAngle = 30;
     [SerializeField] private TextMeshPro stateIndicator;
 
+    private SimpleController playerScript;
+
     private State state = State.Idle;
+
+    private void Start()
+    {
+        playerScript = player.GetComponent<SimpleController>();
+        Debug.Log(playerScript.NoiseLevel);
+    }
 
     float GetDistanceToPlayer()
     {
@@ -49,12 +57,12 @@ public class VisionCone : MonoBehaviour
     {
        if (GetDistanceToPlayer() < visionRange)
         {
-            if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
+            if (playerScript.NoiseLevel == 2)
             {
-
                 return true;
-
             }
+
+            
         }
 
 

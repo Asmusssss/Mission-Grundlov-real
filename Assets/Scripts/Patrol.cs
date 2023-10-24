@@ -26,6 +26,8 @@ public class Patrol : MonoBehaviour
         indexOfTarget = -1;
         NextTarget();
         LookAtTarget();
+
+
     }
 
     void NextTarget()
