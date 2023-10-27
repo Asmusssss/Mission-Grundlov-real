@@ -7,21 +7,15 @@ using UnityEngine.SceneManagement;
 public class winScript : MonoBehaviour
 {
 
-    void Loadscene(string sceneName)
+    private void Update()
     {
-    }
-        void OnCollisionsEnter(Collision collision)
-    {
-        if (collision.gameObject.name == "Player")
+        int col = Physics.OverlapBox(transform.position, new Vector3(0.5f, 0.5f, 0.5f)).Length;
+        if(col > 0)
         {
-            SceneManager.LoadScene(sceneName);
+            SceneManager.LoadScene("winScene"); 
         }
-
-       
-        
     }
 
-    
 
-  
+
 }
