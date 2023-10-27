@@ -9,6 +9,8 @@ public class VisionCone : MonoBehaviour
     [SerializeField] private float visionRange = 10;
     [SerializeField] private float visionConeAngle = 30;
     [SerializeField] private TextMeshPro stateIndicator;
+    [SerializeField] private float soundRange = 10;
+
 
     private SimpleController playerScript;
 
@@ -55,7 +57,7 @@ public class VisionCone : MonoBehaviour
 
     bool PlayerSound()
     {
-       if (GetDistanceToPlayer() < visionRange)
+       if (GetDistanceToPlayer() < soundRange)
         {
             if (playerScript.NoiseLevel == 2)
             {
