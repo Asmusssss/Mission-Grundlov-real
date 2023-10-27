@@ -6,10 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class winScript : MonoBehaviour
 {
+    public LayerMask mask;
 
     private void Update()
     {
-        int col = Physics.OverlapBox(transform.position, new Vector3(0.5f, 0.5f, 0.5f)).Length;
+        int col = Physics.OverlapBox(transform.position, new Vector3(1f, 1f, 1f), Quaternion.identity, mask).Length;
         if(col > 0)
         {
             SceneManager.LoadScene("winScene"); 
