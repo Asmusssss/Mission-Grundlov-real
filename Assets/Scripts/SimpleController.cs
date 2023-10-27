@@ -18,6 +18,8 @@ public class SimpleController : MonoBehaviour
 
     private Vector3 moveDirection = Vector3.zero;
 
+    private Animator animator;
+
     
 
     // Start is called before the first frame update
@@ -26,6 +28,7 @@ public class SimpleController : MonoBehaviour
         controller = GetComponent<CharacterController>();
         currentSpeed = moveSpeed;
         NoiseLevel = 0; 
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
