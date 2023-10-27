@@ -5097,7 +5097,7 @@ MonoBehaviour:
   points:
   - {fileID: 1232264073}
   - {fileID: 110492493}
-  moveSpeed: 4
+  moveSpeed: 5
   targetRadius: 0.1
   timeToRotate: 2
 --- !u!114 &1611929203
@@ -6321,6 +6321,9 @@ MonoBehaviour:
   gravity: 9.81
   crouchSpeed: 2.5
   NoiseLevel: 0
+  buttonLayer:
+    serializedVersion: 2
+    m_Bits: 0
   animator: {fileID: 0}
 --- !u!143 &2143175452
 CharacterController:
