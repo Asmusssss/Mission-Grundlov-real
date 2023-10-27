@@ -16,6 +16,9 @@ public class Patrol : MonoBehaviour
     private Vector3 oldRotation;
     private Vector3 targetRotation;
     private float rotateTimer = 0f;
+    private float currentSpeed = 0f;
+    public Animator animator;
+
 
     private CharacterController controller;
 
@@ -26,8 +29,7 @@ public class Patrol : MonoBehaviour
         indexOfTarget = -1;
         NextTarget();
         LookAtTarget();
-
-
+        animator = GetComponent<Animator>();
     }
 
     void NextTarget()
@@ -59,6 +61,9 @@ public class Patrol : MonoBehaviour
         }
     }
 
+    
+
+
     void Update()
     {
 
@@ -68,6 +73,7 @@ public class Patrol : MonoBehaviour
             LookAtTarget();
         }
 
+        currentSpeed = 0;
         SetRotation();
         if (rotateTimer > timeToRotate)
         {
@@ -75,6 +81,16 @@ public class Patrol : MonoBehaviour
             velocity.Normalize();
             velocity *= moveSpeed * Time.deltaTime;
             controller.Move(velocity);
+            currentSpeed = moveSpeed;
+        }
+
+        if (currentSpeed > 0.5)
+        {
+            animator.SetBool("isWalking",true);
+        }
+        else
+        {
+            animator.SetBool("isWalking",false);
         }
     }
 }
