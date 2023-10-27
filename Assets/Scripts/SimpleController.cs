@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Scripting;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(CharacterController))]
 public class SimpleController : MonoBehaviour
@@ -128,7 +129,6 @@ public class SimpleController : MonoBehaviour
         {
             if (onButton && lastSeenButton != null)
             {
-                lastSeenButton.Release();
                 lastSeenButton = null;
             }
             onButton = false;
@@ -138,9 +138,8 @@ public class SimpleController : MonoBehaviour
     // When we are on a button, call its OnHit method
     private void OnButtonPress(GameObject button)
     {
-        Button buttonScript = button.GetComponent<Button>();
-        lastSeenButton = buttonScript;
-        buttonScript.OnHit();
+        Button ButtonScript = button.GetComponent<Button>();
+        lastSeenButton = ButtonScript;
     }
 
     // Built-in ground check is bad, so use raycast instead
