@@ -15,10 +15,11 @@ public class SimpleController : MonoBehaviour
     public float NoiseLevel = 0;
     private CharacterController controller;
     private bool isGrounded = false;
+    
 
     private Vector3 moveDirection = Vector3.zero;
 
-    private Animator animator;
+    public Animator animator;
 
     
 
@@ -36,6 +37,17 @@ public class SimpleController : MonoBehaviour
     {
         // Check if we're on the ground
         isGrounded = GroundControl();
+
+        Debug.Log(moveDirection);
+
+        if(moveDirection.magnitude > 0.5)
+        {
+            animator.SetBool("isWalking",true);
+        }
+        else
+        {
+            animator.SetBool("isWalking",false);
+        }
 
         // Get user input (old input system)
         float h = Input.GetAxisRaw("Horizontal");
