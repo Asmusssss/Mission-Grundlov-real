@@ -2062,7 +2062,7 @@ MonoBehaviour:
   - {fileID: 1943755277}
   - {fileID: 803746362}
   - {fileID: 1009224251}
-  moveSpeed: 3
+  moveSpeed: 4
   targetRadius: 0.1
   timeToRotate: 2
 --- !u!114 &790502310
@@ -2838,7 +2838,7 @@ MonoBehaviour:
   - {fileID: 651369700}
   - {fileID: 112282249}
   - {fileID: 1145401734}
-  moveSpeed: 3
+  moveSpeed: 4
   targetRadius: 0.1
   timeToRotate: 2
 --- !u!114 &1136630102
@@ -3027,7 +3027,7 @@ MonoBehaviour:
   - {fileID: 1124762812}
   - {fileID: 749472775}
   - {fileID: 387888169}
-  moveSpeed: 3
+  moveSpeed: 4
   targetRadius: 0.1
   timeToRotate: 2
 --- !u!114 &1158681478
@@ -5021,7 +5021,7 @@ MonoBehaviour:
   points:
   - {fileID: 1232264073}
   - {fileID: 110492493}
-  moveSpeed: 3
+  moveSpeed: 4
   targetRadius: 0.1
   timeToRotate: 2
 --- !u!114 &1611929203
