@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -638,6 +638,7 @@ MonoBehaviour:
   visionConeAngle: 30
   stateIndicator: {fileID: 814687849}
   soundRange: 2.05
+  timeRemaining: 1.2
 --- !u!114 &230384057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -944,7 +945,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Idle...
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -954,7 +955,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294910464
-  m_fontColor: {r: 0, g: 0.13243723, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0.13243723, b: 1, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1151,6 +1152,7 @@ MonoBehaviour:
   visionConeAngle: 30
   stateIndicator: {fileID: 1232168154}
   soundRange: 2.05
+  timeRemaining: 1.2
 --- !u!114 &321833063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1165,7 +1167,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points:
   - {fileID: 387888169}
-  - {fileID: 749472775}
   - {fileID: 1124762812}
   - {fileID: 1340306118}
   - {fileID: 1911118880}
@@ -1173,6 +1174,7 @@ MonoBehaviour:
   - {fileID: 1124762812}
   - {fileID: 749472775}
   - {fileID: 387888169}
+  - {fileID: 749472775}
   moveSpeed: 4
   targetRadius: 0.1
   timeToRotate: 2
@@ -2056,6 +2058,7 @@ MonoBehaviour:
   visionConeAngle: 30
   stateIndicator: {fileID: 1758216904}
   soundRange: 2.05
+  timeRemaining: 1.2
 --- !u!114 &534820609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3000,6 +3003,7 @@ MonoBehaviour:
   visionConeAngle: 30
   stateIndicator: {fileID: 1239409628}
   soundRange: 3
+  timeRemaining: 1.2
 --- !u!143 &790502311
 CharacterController:
   m_ObjectHideFlags: 0
@@ -3164,7 +3168,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Idle...
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3174,7 +3178,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294910464
-  m_fontColor: {r: 0, g: 0.13243723, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0.13243723, b: 1, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3681,6 +3685,7 @@ MonoBehaviour:
   visionConeAngle: 30
   stateIndicator: {fileID: 290500001}
   soundRange: 2.05
+  timeRemaining: 1.2
 --- !u!114 &890535449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4233,6 +4238,7 @@ MonoBehaviour:
   visionConeAngle: 30
   stateIndicator: {fileID: 1409807045}
   soundRange: 3
+  timeRemaining: 1.2
 --- !u!143 &1136630103
 CharacterController:
   m_ObjectHideFlags: 0
@@ -4423,6 +4429,7 @@ MonoBehaviour:
   visionConeAngle: 30
   stateIndicator: {fileID: 787109937}
   soundRange: 3
+  timeRemaining: 1.2
 --- !u!143 &1158681479
 CharacterController:
   m_ObjectHideFlags: 0
@@ -5043,7 +5050,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Idle...
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5053,7 +5060,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294910464
-  m_fontColor: {r: 0, g: 0.13243723, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0.13243723, b: 1, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -6777,7 +6784,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Idle...
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6787,7 +6794,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294910464
-  m_fontColor: {r: 0, g: 0.13243723, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0.13243723, b: 1, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

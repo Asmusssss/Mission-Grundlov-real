@@ -14,6 +14,7 @@ public class VisionCone : MonoBehaviour
     [SerializeField] private TextMeshPro stateIndicator;
     [SerializeField] private float soundRange = 10;
 
+    public float timeRemaining = 1.2f;
 
     private SimpleController playerScript;
 
@@ -83,7 +84,18 @@ public class VisionCone : MonoBehaviour
             {
                 if (GetAngleToPlayer() < visionConeAngle)
                 {
-                    SceneManager.LoadScene("LoseScene");
+                    if (timeRemaining > 0)
+                    {
+                        Debug.Log(timeRemaining);
+                        timeRemaining -= Time.deltaTime;
+
+                    }
+                    else
+                    {
+
+                        SceneManager.LoadScene("loseScene");
+                    }
+                    
                     return true;
                     
                 }
