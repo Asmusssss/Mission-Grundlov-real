@@ -40,15 +40,16 @@ public class SimpleController : MonoBehaviour
         // Check if we're on the ground
         isGrounded = GroundControl();
 
-        Debug.Log(moveDirection);
+        
 
-        if(moveDirection.magnitude > 0.5)
+        
+        if(moveDirection.magnitude > 2.5)
         {
             animator.SetBool("isWalking",true);
         }
         else
         {
-            animator.SetBool("isWalking",false);
+            animator.SetBool("isWalking", false);
         }
 
         // Get user input (old input system)
@@ -73,17 +74,19 @@ public class SimpleController : MonoBehaviour
                 transform.forward = new Vector3(h, 0f, v);
             }
 
-            if (Input.GetKey(KeyCode.LeftShift))
+            if (Input.GetKey(KeyCode.LeftShift) && moveDirection.magnitude > 0.5f)
             {
                 Debug.Log("Crouching");
                 currentSpeed = crouchSpeed;
                 NoiseLevel = 1;
+                animator.SetBool("isCrouching", true);
             }
             else
             {
                 Debug.Log("Not crouching");
                 currentSpeed = moveSpeed;
                 NoiseLevel = 2;
+                animator.SetBool("isCrouching", false);
             }
             if(moveDirection.magnitude == 0)
             {
@@ -113,4 +116,6 @@ public class SimpleController : MonoBehaviour
             Vector3.down,                                               // ...pointing downwards...
             controller.bounds.extents.y + controller.skinWidth + 0.2f); // ... to the bottom of the controller.
     }
+
+    
 }
