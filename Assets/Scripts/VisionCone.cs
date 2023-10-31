@@ -1,7 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class VisionCone : MonoBehaviour
 {
@@ -80,7 +83,9 @@ public class VisionCone : MonoBehaviour
             {
                 if (GetAngleToPlayer() < visionConeAngle)
                 {
+                    SceneManager.LoadScene("LoseScene");
                     return true;
+                    
                 }
 
             }
@@ -115,7 +120,7 @@ public class VisionCone : MonoBehaviour
         }
 
         stateIndicator.text = "Idle...";
-        //transform.forward = Vector3.forward;
+       //transform.forward = Vector3.forward;
 
 
     }

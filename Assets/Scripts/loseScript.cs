@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class loseScript : MonoBehaviour
 {
 
-    public float timeRemaining = 3;
+    public float timeRemaining = 1.2f;
 
 
     private SimpleController playerscript;
@@ -16,22 +16,37 @@ public class loseScript : MonoBehaviour
 
     private void Update()
     {
-        int col = Physics.OverlapBox(transform.position, new Vector3(0.5f, 0.5f,0.5f), Quaternion.identity, mask).Length;
-        if (col > 0 )//&& playerscript.NoiseLevel == 2 )
+        Collider[] col = Physics.OverlapSphere(transform.position, 1.5f, mask);
+        if (col.Length > 0)
         {
-            SceneManager.LoadScene("loseScene");
-            //if (timeRemaining > 3)
+
+            Collider player = col[0];
+            playerscript = player.gameObject.GetComponent<SimpleController>();
+            if(playerscript.NoiseLevel >= 2)
             {
-                //timeRemaining -= Time.deltaTime;
-                
-            } 
-            //else
-            {
-                //SceneManager.LoadScene("loseScene");
+                Debug.Log("ngfjyfjygf");
+               
+                if (timeRemaining > 0)
+                {
+                    Debug.Log(timeRemaining);
+                    timeRemaining -= Time.deltaTime;
+
+                }
+                else
+                {
+                    
+                    SceneManager.LoadScene("loseScene");
+                }
             }
+            
 
         }
     }
 
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, 1.5f);
+    }
 }
 
