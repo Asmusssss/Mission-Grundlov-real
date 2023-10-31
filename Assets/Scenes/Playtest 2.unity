@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -927,8 +927,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2, y: 0.46842325, z: 2}
-  m_Center: {x: 0, y: 0.23421162, z: 0}
+  m_Size: {x: 2, y: 2.33, z: 2}
+  m_Center: {x: 0, y: 1.03, z: 0}
 --- !u!114 &236456787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12190,6 +12190,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: bc318477dad771a479204a435cd3c50b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8aa09626cebaf344f9ab9eb8a73ac84a, type: 2}
     - target: {fileID: 919132149155446097, guid: bc318477dad771a479204a435cd3c50b, type: 3}
       propertyPath: m_Name
       value: grundlov
@@ -12221,7 +12225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
 --- !u!1 &1911118879
 GameObject:
   m_ObjectHideFlags: 0
