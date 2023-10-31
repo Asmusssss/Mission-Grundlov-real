@@ -1,7 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class VisionCone : MonoBehaviour
 {
@@ -11,6 +14,7 @@ public class VisionCone : MonoBehaviour
     [SerializeField] private TextMeshPro stateIndicator;
     [SerializeField] private float soundRange = 10;
 
+    public float timeRemaining = 1.2f;
 
     private SimpleController playerScript;
 
@@ -80,7 +84,20 @@ public class VisionCone : MonoBehaviour
             {
                 if (GetAngleToPlayer() < visionConeAngle)
                 {
+                    if (timeRemaining > 0)
+                    {
+                        Debug.Log(timeRemaining);
+                        timeRemaining -= Time.deltaTime;
+
+                    }
+                    else
+                    {
+
+                        SceneManager.LoadScene("loseScene");
+                    }
+                    
                     return true;
+                    
                 }
 
             }
@@ -115,7 +132,7 @@ public class VisionCone : MonoBehaviour
         }
 
         stateIndicator.text = "Idle...";
-        //transform.forward = Vector3.forward;
+       //transform.forward = Vector3.forward;
 
 
     }

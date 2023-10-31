@@ -44,7 +44,7 @@ public class SimpleController : MonoBehaviour
         // Check if we're on the ground
         isGrounded = GroundControl();
 
-        Debug.Log(moveDirection);
+        
 
         
         if(moveDirection.magnitude > 2.5)
@@ -153,4 +153,6 @@ public class SimpleController : MonoBehaviour
             Vector3.down,                                               // ...pointing downwards...
             controller.bounds.extents.y + controller.skinWidth + 0.2f); // ... to the bottom of the controller.
     }
+
+    
 }
