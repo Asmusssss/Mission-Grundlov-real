@@ -1,47 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Button : MonoBehaviour
+public class ButtonScript : MonoBehaviour
 {
+    [SerializeField]
+    GameObject VaultDoor;
 
-    [SerializeField] private float pressDownSpeed = 0.01f;
-    [Tooltip("Action to take when button is pressed")]
-    
-    public GameObject VaultDoor;
+    bool isOpened = false;
 
-    private Vector3 nextPosition;
-    private Vector3 targetPosition;
-
-    private bool ready = true;
-
-    private void Start()
+    void OnTriggerEnter(Collider collider)
     {
-        targetPosition = transform.localPosition;
-        nextPosition = targetPosition;
-        nextPosition.y -= 0.04f;
-    }
-
-
-    private void Update()
-    {
-        transform.localPosition = Vector3.MoveTowards(transform.localPosition,
-                                                      targetPosition,
-                                                      pressDownSpeed * Time.deltaTime);
-    }
-
-    public void OnHit()
-    { 
-        if (ready)
+        if (!isOpened)
         {
-            ready = false;
-            (nextPosition, targetPosition) = (targetPosition, nextPosition);
+            isOpened = true;
+            VaultDoor.transform.position += new Vector3(0, 4, 0);
         }
-    }
-
-    public void Release()
-    {
-        (nextPosition, targetPosition) = (targetPosition, nextPosition);
-        ready = true;
+        
     }
 }
