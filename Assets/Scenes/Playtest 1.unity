@@ -38,7 +38,11 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+<<<<<<< HEAD
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+=======
   m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+>>>>>>> 23d5c6d7ee86cb558f52286052b4fd7d968b9af8
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4973,7 +4977,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2c821c8897e66f44c94493e04c313800, type: 3}
       propertyPath: m_LocalPosition.y
+<<<<<<< HEAD
+      value: 0.52
+=======
       value: -0
+>>>>>>> 23d5c6d7ee86cb558f52286052b4fd7d968b9af8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2c821c8897e66f44c94493e04c313800, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5186,7 +5194,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294910464
-  m_fontColor: {r: 0, g: 0.13243723, b: 1, a: 0}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
