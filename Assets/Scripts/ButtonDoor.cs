@@ -11,16 +11,16 @@ public class ButtonDoor : MonoBehaviour
     GameObject DoorToButton;
     GameObject Key;
    
-    GameObject.Find("Key").transform.position;
+    
 
 
-    new Vector3 = (-13,-3,-3);
+ 
     
     bool hasKey = false;
 
     void OnTriggerEnter(Collider collider)
     {
-        if (Key = Vector3)
+        if (Key)
         {
             hasKey = true;
             DoorToButton.transform.position += new Vector3(0, 4, 0);
