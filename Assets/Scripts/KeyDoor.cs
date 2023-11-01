@@ -4,9 +4,8 @@ public class Key : MonoBehaviour
 {
     [SerializeField]
     GameObject Keyy;
-    GameObject ButtonDoor;
 
-    bool hasKey = false;
+    public bool hasKey = false;
 
     void OnTriggerEnter(Collider collider)
     {
