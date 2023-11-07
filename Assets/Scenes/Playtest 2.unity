@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -256,7 +256,7 @@ GameObject:
   - component: {fileID: 69014673}
   - component: {fileID: 69014672}
   - component: {fileID: 69014671}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Inerwall 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -510,7 +510,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8a8a7adc9e7ecce439c325488fd1ccf0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8a8a7adc9e7ecce439c325488fd1ccf0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -634,7 +634,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2143175450}
-  visionRange: 10
+  visionRange: 7
   visionConeAngle: 30
   stateIndicator: {fileID: 814687849}
   soundRange: 2.05
@@ -1266,7 +1266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2143175450}
-  visionRange: 10
+  visionRange: 7
   visionConeAngle: 30
   stateIndicator: {fileID: 1232168154}
   soundRange: 2.05
@@ -1314,7 +1314,7 @@ GameObject:
   - component: {fileID: 324644272}
   - component: {fileID: 324644271}
   - component: {fileID: 324644270}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Button room 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1419,7 +1419,7 @@ GameObject:
   - component: {fileID: 349530561}
   - component: {fileID: 349530560}
   - component: {fileID: 349530559}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Inerwall 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1561,7 +1561,7 @@ GameObject:
   - component: {fileID: 400358016}
   - component: {fileID: 400358015}
   - component: {fileID: 400358014}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Key room 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1842,7 +1842,7 @@ GameObject:
   - component: {fileID: 475850970}
   - component: {fileID: 475850969}
   - component: {fileID: 475850968}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Outerwall 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1964,7 +1964,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8a8a7adc9e7ecce439c325488fd1ccf0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8a8a7adc9e7ecce439c325488fd1ccf0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2035,7 +2035,7 @@ GameObject:
   - component: {fileID: 502223736}
   - component: {fileID: 502223735}
   - component: {fileID: 502223734}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Grundlov room 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2172,7 +2172,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2143175450}
-  visionRange: 10
+  visionRange: 7
   visionConeAngle: 30
   stateIndicator: {fileID: 1758216904}
   soundRange: 2.05
@@ -2443,7 +2443,7 @@ GameObject:
   - component: {fileID: 684272448}
   - component: {fileID: 684272447}
   - component: {fileID: 684272446}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Key room 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2603,7 +2603,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8a8a7adc9e7ecce439c325488fd1ccf0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8a8a7adc9e7ecce439c325488fd1ccf0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2845,7 +2845,7 @@ GameObject:
   - component: {fileID: 787301263}
   - component: {fileID: 787301262}
   - component: {fileID: 787301261}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Button room 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3415,7 +3415,7 @@ GameObject:
   - component: {fileID: 848704260}
   - component: {fileID: 848704259}
   - component: {fileID: 848704258}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Key room 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3520,7 +3520,7 @@ GameObject:
   - component: {fileID: 886381159}
   - component: {fileID: 886381158}
   - component: {fileID: 886381157}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Inerwall 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3678,7 +3678,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2143175450}
-  visionRange: 10
+  visionRange: 7
   visionConeAngle: 30
   stateIndicator: {fileID: 290500001}
   soundRange: 2.05
@@ -3726,7 +3726,7 @@ GameObject:
   - component: {fileID: 945863997}
   - component: {fileID: 945863996}
   - component: {fileID: 945863995}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Grundlov room 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3876,7 +3876,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8a8a7adc9e7ecce439c325488fd1ccf0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8a8a7adc9e7ecce439c325488fd1ccf0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4078,7 +4078,7 @@ GameObject:
   - component: {fileID: 1132038814}
   - component: {fileID: 1132038813}
   - component: {fileID: 1132038812}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Grundlov room 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4534,7 +4534,7 @@ GameObject:
   - component: {fileID: 1175591291}
   - component: {fileID: 1175591290}
   - component: {fileID: 1175591289}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Outerwall 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4639,7 +4639,7 @@ GameObject:
   - component: {fileID: 1176503333}
   - component: {fileID: 1176503332}
   - component: {fileID: 1176503331}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Outerwall 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5402,7 +5402,7 @@ GameObject:
   - component: {fileID: 1242628235}
   - component: {fileID: 1242628234}
   - component: {fileID: 1242628233}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Inerwall 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5805,7 +5805,7 @@ GameObject:
   - component: {fileID: 1385330189}
   - component: {fileID: 1385330188}
   - component: {fileID: 1385330187}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Inerwall 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6234,7 +6234,7 @@ GameObject:
   - component: {fileID: 1476446476}
   - component: {fileID: 1476446475}
   - component: {fileID: 1476446474}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Inerwall 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11380,7 +11380,7 @@ GameObject:
   - component: {fileID: 1600361754}
   - component: {fileID: 1600361753}
   - component: {fileID: 1600361752}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Grundlov room 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11944,7 +11944,7 @@ GameObject:
   - component: {fileID: 1828510775}
   - component: {fileID: 1828510774}
   - component: {fileID: 1828510773}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Key room 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12049,7 +12049,7 @@ GameObject:
   - component: {fileID: 1874083539}
   - component: {fileID: 1874083538}
   - component: {fileID: 1874083537}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Outerwall 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12405,7 +12405,7 @@ GameObject:
   - component: {fileID: 1974868198}
   - component: {fileID: 1974868197}
   - component: {fileID: 1974868196}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Inerwall 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
