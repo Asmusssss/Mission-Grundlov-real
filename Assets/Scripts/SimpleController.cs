@@ -16,13 +16,22 @@ public class SimpleController : MonoBehaviour
     public float NoiseLevel = 0;
     private CharacterController controller;
     private bool isGrounded = false;
+    public Animator animator;
 
     [Tooltip("Which things count as buttons?")]
     public LayerMask buttonLayer;
 
     private Vector3 moveDirection = Vector3.zero;
 
+
     public Animator animator;
+
+    [Tooltip("Which things count as buttons?")]
+    public LayerMask buttonLayer;
+    // Button detection
+    private bool onButton = false;
+    private Button lastSeenButton = null;
+
 
  
     // Start is called before the first frame update
@@ -30,7 +39,9 @@ public class SimpleController : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
         currentSpeed = moveSpeed;
-        NoiseLevel = 0; 
+
+      
+        NoiseLevel = 0;
         animator = GetComponent<Animator>();
     }
 
@@ -61,6 +72,15 @@ public class SimpleController : MonoBehaviour
         if (isGrounded && moveDirection.y < 0)
         {
             moveDirection.y = 0;
+        }
+
+        if(moveDirection.magnitude > 0.5)
+        {
+            animator.SetBool("isWalking", true);
+        }
+        else
+        {
+            animator.SetBool("isWalking", false);
         }
 
         // Handle movement on the ground
@@ -105,6 +125,44 @@ public class SimpleController : MonoBehaviour
 
         // Move
         controller.Move(moveDirection * Time.deltaTime);
+
+    }
+
+    // Look for a button under our feet.
+    private void FindButton()
+    {
+        // Make a ray that points down
+        Ray downRay = new Ray(transform.position + Vector3.up, Vector3.down);
+        RaycastHit hit;
+
+        // Check if it hit a button
+        if (Physics.Raycast(downRay, out hit, 10f, buttonLayer))
+        {
+            // We only act the first time we touch a given button
+            if (!onButton)
+            {
+                OnButtonPress(hit.collider.gameObject);
+                onButton = true; // Ensures we only do one button press
+            }
+        }
+
+        else // If we are not standing on a button, reset onButton
+        {
+            if (onButton && lastSeenButton != null)
+            {
+                lastSeenButton.Release();
+                lastSeenButton = null;
+            }
+            onButton = false;
+        }
+    }
+
+    // When we are on a button, call its OnHit method
+    private void OnButtonPress(GameObject button)
+    {
+        Button buttonScript = button.GetComponent<Button>();
+        lastSeenButton = buttonScript;
+        buttonScript.OnHit();
     }
 
    
