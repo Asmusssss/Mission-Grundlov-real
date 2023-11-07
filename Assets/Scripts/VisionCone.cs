@@ -23,7 +23,7 @@ public class VisionCone : MonoBehaviour
     private void Start()
     {
         playerScript = player.GetComponent<SimpleController>();
-        Debug.Log(playerScript.NoiseLevel);
+        //Debug.Log(playerScript.NoiseLevel);
     }
 
     float GetDistanceToPlayer()
@@ -86,7 +86,7 @@ public class VisionCone : MonoBehaviour
                 {
                     if (timeRemaining > 0)
                     {
-                        Debug.Log(timeRemaining);
+                        //Debug.Log(timeRemaining);
                         timeRemaining -= Time.deltaTime;
 
                     }

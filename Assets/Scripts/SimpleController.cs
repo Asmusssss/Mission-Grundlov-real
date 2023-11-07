@@ -76,14 +76,14 @@ public class SimpleController : MonoBehaviour
 
             if (Input.GetKey(KeyCode.LeftShift) && moveDirection.magnitude > 0.5f)
             {
-                Debug.Log("Crouching");
+                //Debug.Log("Crouching");
                 currentSpeed = crouchSpeed;
                 NoiseLevel = 1;
                 animator.SetBool("isCrouching", true);
             }
             else
             {
-                Debug.Log("Not crouching");
+                //Debug.Log("Not crouching");
                 currentSpeed = moveSpeed;
                 NoiseLevel = 2;
                 animator.SetBool("isCrouching", false);
