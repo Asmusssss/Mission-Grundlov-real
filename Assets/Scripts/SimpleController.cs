@@ -16,13 +16,17 @@ public class SimpleController : MonoBehaviour
     public float NoiseLevel = 0;
     private CharacterController controller;
     private bool isGrounded = false;
-
-    [Tooltip("Which things count as buttons?")]
-    public LayerMask buttonLayer;
+    public Animator animator;
 
     private Vector3 moveDirection = Vector3.zero;
 
-    public Animator animator;
+
+    [Tooltip("Which things count as buttons?")]
+    public LayerMask buttonLayer;
+    // Button detection
+    private bool onButton = false;
+    private Button lastSeenButton = null;
+
 
  
     // Start is called before the first frame update
@@ -30,7 +34,9 @@ public class SimpleController : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
         currentSpeed = moveSpeed;
-        NoiseLevel = 0; 
+
+      
+        NoiseLevel = 0;
         animator = GetComponent<Animator>();
     }
 
@@ -61,6 +67,15 @@ public class SimpleController : MonoBehaviour
         if (isGrounded && moveDirection.y < 0)
         {
             moveDirection.y = 0;
+        }
+
+        if(moveDirection.magnitude > 0.5)
+        {
+            animator.SetBool("isWalking", true);
+        }
+        else
+        {
+            animator.SetBool("isWalking", false);
         }
 
         // Handle movement on the ground
@@ -105,9 +120,10 @@ public class SimpleController : MonoBehaviour
 
         // Move
         controller.Move(moveDirection * Time.deltaTime);
+
     }
 
-   
+  
     // Built-in ground check is bad, so use raycast instead
     private bool GroundControl()
     {
