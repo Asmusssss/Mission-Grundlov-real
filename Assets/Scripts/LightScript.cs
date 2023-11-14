@@ -33,7 +33,7 @@ public class LightScript : MonoBehaviour
 
         if (Physics.Raycast(ray, out  hitInfo, vectorToWall.magnitude))
         {
-
+.
             //Debug.Log(hitInfo.point);
             //Debug.Log("Name: " + hitInfo.collider.name);
             float distanceToWall = (transform.position - hitInfo.point).magnitude; // Beregn vha. raycast hitinfo. Måske: (transform.position - hitInfo.point).magnitude
