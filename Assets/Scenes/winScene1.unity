@@ -553,7 +553,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 47cb9488ab224604cbad808d6d868f35, type: 3}
+  m_Texture: {fileID: 2800000, guid: 75d348c4627ec2141bd580ec5ee7223f, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1588,7 +1588,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Play
+  m_text: 'Play again
 
 '
   m_isRightToLeft: 0
@@ -1703,7 +1703,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.31500244, y: -244.59001}
+  m_AnchoredPosition: {x: -0.31500244, y: -112.8}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1927498372

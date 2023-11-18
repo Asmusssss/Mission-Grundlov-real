@@ -36,7 +36,9 @@ public class LightScript : MonoBehaviour
 
             //Debug.Log(hitInfo.point);
             //Debug.Log("Name: " + hitInfo.collider.name);
+
             float distanceToWall = (transform.position - hitInfo.point).magnitude; // Beregn vha. raycast hitinfo. M?ske: (transform.position - hitInfo.point).magnitude
+
             Debug.Log(distanceToWall);
             float newScale = defaultScale * distanceToWall / normalDistance;
             transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, newScale);

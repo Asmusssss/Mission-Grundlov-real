@@ -13,7 +13,7 @@ public class winScript : MonoBehaviour
         int col = Physics.OverlapBox(transform.position, new Vector3(1f, 1f, 1f), Quaternion.identity, mask).Length;
         if(col > 0)
         {
-            SceneManager.LoadScene("winScene"); 
+            SceneManager.LoadScene("winScene1"); 
         }
     }
 
